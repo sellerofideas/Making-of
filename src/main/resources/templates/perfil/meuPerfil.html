@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeuPerfil</title>
+</head>
+<body>
+    <h1>Meu Perfil</h1>
+    <a href="/listaPerfis">Buscar</a>
+    <a href="/sair">Sair</a>
+    <div>
+        <span th:text="${id}"></span>        
+        <span th:text="${nome}"></span>      
+        <span th:text="${nomeArtistico}"></span>
+        <span th:text="${email}"></span>
+        <span th:text="${bio}"></span>
+        <!--a th:href="@{'/perfis/' + ${perfil.id}}" class="btn btn-warning">Atualizar</td>
+        <a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/perfis/{id}(id=${perfil.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td-->
+    </div>
+</body>
+</html>

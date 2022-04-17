@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfis</title>
+</head>
+
+<body>
+    <h1>Nossos Perfis</h1>
+    <a href="/sair">Sair</a>
+    <a href="/cadastrar">Cadastrar</a>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Bio</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Bio</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr th:each="perfil : ${perfis}">
+                        <td th:text="${perfil.id}"></td>
+                        <td th:text="${perfil.nomeArtistico}"></td>
+                        <td th:text="${perfil.email}"></td>
+                        <td th:text="${perfil.bio}"></td>
+                        <td>Ver perfil</td>
+                        <td>Fazer Contato</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
